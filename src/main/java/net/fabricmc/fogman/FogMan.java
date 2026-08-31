@@ -31,7 +31,7 @@ public class FogMan implements ModInitializer {
 
         // Gece Doğma Döngüsü (Her 30 saniyede bir kontrol eder)
         ServerTickEvents.END_WORLD_TICK.register(world -> {
-            if (world instanceof ServerWorld serverWorld && !serverWorld.isClient()) {
+            if (!world.isClient() && world instanceof ServerWorld serverWorld) {
                 spawnTimer++;
                 if (spawnTimer >= 600) { // 600 tick = 30 saniye
                     spawnTimer = 0;
@@ -55,5 +55,3 @@ public class FogMan implements ModInitializer {
                 }
             }
         });
-    }
-}

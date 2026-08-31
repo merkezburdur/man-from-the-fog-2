@@ -15,9 +15,6 @@ public class FogManEntity extends HostileEntity implements GeoEntity {
 
     public FogManEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
-    }
-    }
-
     public void triggerSpawnEffect() {
         this.getWorld().playSound(
             null, 

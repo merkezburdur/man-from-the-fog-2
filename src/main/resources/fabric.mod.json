@@ -12,8 +12,12 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.fogman.FogManMod"
+      "net.fabricmc.fogman.FogMan"
+    ],
+    "client": [
+      "net.fabricmc.fogman.FogManClient"
     ]
+    }
   },
   "mixins": [],
   "depends": {

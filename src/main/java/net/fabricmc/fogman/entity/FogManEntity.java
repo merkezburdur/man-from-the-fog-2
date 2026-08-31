@@ -18,8 +18,9 @@ public class FogManEntity extends HostileEntity implements GeoEntity {
     }
 
     @Override
-    public void onUnload() {
+    public void onRemoved(RemovalReason reason) {
         if (!this.getWorld().isClient) {
+            // Yaratık silindiğinde veya despawn olduğunda disable sesini çal
             this.getWorld().playSound(
                 null, 
                 this.getBlockPos(), 
@@ -28,7 +29,7 @@ public class FogManEntity extends HostileEntity implements GeoEntity {
                 1.0F, 1.0F
             );
         }
-        super.onUnload();
+        super.onRemoved(reason);
     }
 
     public void triggerSpawnEffect() {

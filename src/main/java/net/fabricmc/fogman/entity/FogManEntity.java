@@ -16,20 +16,6 @@ public class FogManEntity extends HostileEntity implements GeoEntity {
     public FogManEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
     }
-
-    @Override
-    public void onRemoved(RemovalReason reason) {
-        if (!this.getWorld().isClient) {
-            // Yaratık silindiğinde veya despawn olduğunda disable sesini çal
-            this.getWorld().playSound(
-                null, 
-                this.getBlockPos(), 
-                ModSounds.DISABLE, 
-                SoundCategory.HOSTILE, 
-                1.0F, 1.0F
-            );
-        }
-        super.onRemoved(); // Parametresiz çağırıyoruz
     }
 
     public void triggerSpawnEffect() {

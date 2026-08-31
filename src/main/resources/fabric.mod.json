@@ -17,7 +17,6 @@
     "client": [
       "net.fabricmc.fogman.FogManClient"
     ]
-    }
   },
   "mixins": [],
   "depends": {

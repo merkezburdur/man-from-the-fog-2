@@ -29,7 +29,7 @@ public class FogManEntity extends HostileEntity implements GeoEntity {
                 1.0F, 1.0F
             );
         }
-        super.onRemoved(reason);
+        super.onRemoved(); // Parametresiz çağırıyoruz
     }
 
     public void triggerSpawnEffect() {

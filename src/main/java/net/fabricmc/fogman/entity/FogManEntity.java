@@ -15,6 +15,20 @@ public class FogManEntity extends HostileEntity implements GeoEntity {
 
     public FogManEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
+    }
+
+    public void playDisableSound() {
+        if (!this.getWorld().isClient) {
+            this.getWorld().playSound(
+                null, 
+                this.getBlockPos(), 
+                ModSounds.DISABLE, 
+                SoundCategory.HOSTILE, 
+                1.0F, 1.0F
+            );
+        }
+    }
+
     public void triggerSpawnEffect() {
         this.getWorld().playSound(
             null, 

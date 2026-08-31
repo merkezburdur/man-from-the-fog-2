@@ -1,0 +1,14 @@
+{
+  "entity.fogman.arrive": {
+    "category": "hostile",
+    "sounds": [
+      "fogman:arrive"
+    ]
+  },
+  "entity.fogman.disable": {
+    "category": "hostile",
+    "sounds": [
+      "fogman:disable"
+    ]
+  }
+}
